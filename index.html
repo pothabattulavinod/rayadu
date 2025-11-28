@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Rayudu Farms — Fresh Junnu & Milk</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+  <style>
+    :root{
+      --accent:#0da36c;
+      --accent-light:#59e7ab;
+      --dark:#2d2d2d;
+      --muted:#58656f;
+      --bg:#f5fff9;
+      --card-bg:rgba(255,255,255,0.75);
+      --blur:12px;
+    }
+
+    body{
+      background:var(--bg);
+      font-family:"Inter",sans-serif;
+      margin:0;
+      color:var(--dark);
+    }
+
+    /* HEADER */
+    nav{
+      background:#ffffffd8;
+      backdrop-filter:blur(10px);
+      box-shadow:0 2px 10px rgba(0,0,0,0.05);
+      position:sticky;
+      top:0;
+      z-index:999;
+    }
+
+    .logo{
+      width:48px;
+      height:48px;
+      border-radius:14px;
+      background:linear-gradient(135deg,var(--accent),var(--accent-light));
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      color:#fff;
+      font-weight:800;
+      font-size:1.2rem;
+      margin-right:10px;
+      box-shadow:0 4px 15px rgba(0,0,0,0.15);
+    }
+
+    /* ORDER NOW BUTTON */
+    .order-btn {
+      background: var(--accent);
+      color: #fff !important;
+      padding: 10px 18px;
+      border-radius: 30px;
+      font-weight: 600;
+      border: none;
+      display: inline-block;
+      transition:0.3s ease;
+      white-space: nowrap;
+    }
+
+    .order-btn:hover{
+      background:#0a8b5c;
+      color:#fff !important;
+    }
+
+    .hero-img{
+      max-width:450px;
+      width:100%;
+      border-radius:24px;
+      box-shadow:0 12px 35px rgba(0,0,0,0.18);
+    }
+
+    .soft-card,.product-card,.contact-card{
+      background:var(--card-bg);
+      backdrop-filter:blur(var(--blur));
+      border-radius:22px;
+      box-shadow:0 12px 30px rgba(0,0,0,0.1);
+      border:1px solid rgba(255,255,255,0.55);
+      transition:0.3s ease;
+    }
+
+    .product-card:hover,.soft-card:hover,.contact-card:hover{
+      transform:translateY(-5px);
+      box-shadow:0 14px 40px rgba(0,0,0,0.15);
+    }
+
+    .contact-badge{
+      background:linear-gradient(135deg,#0da36c,#59e7ab);
+      display:inline-flex;
+      align-items:center;
+      font-weight:700;
+      padding:8px 16px;
+      border-radius:50px;
+      color:#fff;
+      font-size:0.95rem;
+    }
+
+    footer{
+      background:#fff;
+      padding:32px;
+      margin-top:40px;
+      border-top:1px solid #dcdcdc;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    /* CONTACT INFO STYLING */
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      background: #ffffffc9;
+      padding: 18px;
+      border-radius: 12px;
+      border-left: 5px solid var(--accent);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+      font-size: 1rem;
+      color: var(--dark);
+      max-width: 400px;
+      margin: 0 auto 20px auto;
+    }
+
+    .contact-info span {
+      display: block;
+      font-weight: 600;
+    }
+
+    .contact-info span strong {
+      color: var(--accent);
+    }
+
+    /* MOBILE MENU FIX */
+    @media (max-width: 768px) {
+      .navbar-collapse {
+        background: #ffffffee;
+        padding: 15px;
+        border-radius: 12px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav class="navbar navbar-expand-md">
+  <div class="container">
+
+    <a class="d-flex align-items-center text-decoration-none text-dark fw-bold fs-4" href="#">
+      <div class="logo">RF</div> Rayudu Farms
+    </a>
+
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu">
+      <i class="bi bi-list fs-1"></i>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="mainMenu">
+      <div class="d-flex flex-column flex-md-row gap-3 align-items-md-center fw-semibold">
+
+        <a href="#products" class="text-dark text-decoration-none">Products</a>
+        <a href="#showcase" class="text-dark text-decoration-none">Showcase</a>
+        <a href="#pricing" class="text-dark text-decoration-none">Pricing</a>
+        <a href="#contact" class="text-dark text-decoration-none">Contact</a>
+
+        <a href="https://wa.me/917731965666?text=I%20want%20to%20Order%20Now"
+           class="order-btn text-decoration-none text-white">
+           Order Now
+        </a>
+
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="text-center py-5">
+  <img src="https://images.hindustantimes.com/telugu/img/2025/04/02/1600x900/junnu_1743555607184_1743555627491.jpg" class="hero-img">
+  <h1 class="fw-bold mt-4">Pure Junnu & Fresh Milk</h1>
+  <p class="text-muted fs-5">Village-sourced, traditionally prepared, delivered fresh daily.</p>
+</section>
+
+<!-- SHOWCASE -->
+<section id="showcase" class="container py-5">
+  <h2 class="fw-bold text-center mb-4">Why Our Milk is Special</h2>
+
+  <div class="row g-4">
+
+    <div class="col-md-4">
+      <div class="soft-card p-4 text-center h-100">
+        <i class="bi bi-droplet-half display-5 text-success"></i>
+        <h5 class="fw-bold mt-3">Fresh From Local Farmers</h5>
+        <p class="text-muted">Daily milk collected directly from trusted village farmers.</p>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="soft-card p-4 text-center h-100">
+        <i class="bi bi-stars display-5 text-success"></i>
+        <h5 class="fw-bold mt-3">Pure & Chemical-Free</h5>
+        <p class="text-muted">No preservatives — just pure, healthy milk.</p>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="soft-card p-4 text-center h-100">
+        <i class="bi bi-basket-fill display-5 text-success"></i>
+        <h5 class="fw-bold mt-3">Authentic Junnu Guarantee</h5>
+        <p class="text-muted">Traditional colostrum-based Junnu prepared fresh.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products" class="container py-5">
+  <h2 class="fw-bold mb-4 text-center">Our Products</h2>
+
+  <div class="row g-4">
+
+    <div class="col-md-4">
+      <div class="product-card p-3 h-100">
+        <img src="https://d2zfbyesi0qka0.cloudfront.net/wp-content/uploads/2024/07/Junnu.jpg" class="rounded mb-3 w-100" height="170" style="object-fit:cover;">
+        <h5 class="fw-bold">Junnu</h5>
+        <p class="text-muted small">Traditional preserved Junnu powder.</p>
+        <h4 class="text-success">₹400/kg</h4>
+        <a href="https://wa.me/917731965666?text=I%20want%20to%20book%20Junnu%20Powder"
+           class="btn btn-success w-100 mt-3 rounded-pill">Book on WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="product-card p-3 h-100">
+        <img src="https://ucarecdn.com/b3026e62-e102-4de4-9367-c3355d063d7d/-/format/auto/-/preview/3000x3000/-/quality/lighter/IMG_20201117_132103.jpg" class="rounded mb-3 w-100" height="170" style="object-fit:cover;">
+        <h5 class="fw-bold">Mixed Junnu </h5>
+        <p class="text-muted small">Balanced flavour, smooth & lightly mixed.</p>
+        <h4 class="text-success">₹400/ltr</h4>
+        <a href="https://wa.me/917731965666?text=I%20want%20to%20book%20Mixed%20Junnu%20Milk"
+           class="btn btn-success w-100 mt-3 rounded-pill">Book on WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="product-card p-3 h-100">
+        <img src="https://www.yummytummyaarthi.com/wp-content/uploads/2018/06/IMG_6261.jpg" class="rounded mb-3 w-100" height="170" style="object-fit:cover;">
+        <h5 class="fw-bold">Junnu Milk</h5>
+        <p class="text-muted small">Rich, creamy & full natural flavour.</p>
+        <h4 class="text-success">₹500/ltr</h4>
+        <a href="https://wa.me/917731965666?text=I%20want%20to%20book%20Junnu%20Milk"
+           class="btn btn-success w-100 mt-3 rounded-pill">Book on WhatsApp</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing" class="container py-5">
+  <h2 class="fw-bold text-center mb-4">Pricing & Bulk Orders</h2>
+
+  <div class="soft-card p-4">
+
+    <h5 class="fw-bold mb-3">
+      <i class="bi bi-cash-stack text-success"></i> Retail Pricing
+    </h5>
+    <p>Product prices are listed above in the product section.</p>
+
+    <hr>
+
+    <h5 class="fw-bold mt-3">
+      <i class="bi bi-truck text-success"></i> Bulk Orders
+    </h5>
+    <p>Bulk discounts start from <strong>50+ litres/kg</strong>.</p>
+
+    <div class="d-flex gap-2 mt-3 justify-content-center">
+      <a href="https://wa.me/917731965666?text=Hello%2C%20I%20want%20Bulk%20Order"
+         class="btn btn-success w-auto fw-bold rounded-pill py-2 px-4">
+        <i class="bi bi-whatsapp"></i> WhatsApp
+      </a>
+
+      <a href="tel:+917731965666"
+         class="btn btn-dark w-auto fw-bold rounded-pill py-2 px-4">
+        <i class="bi bi-telephone-fill"></i> Call
+      </a>
+    </div>
+
+    <a href="https://wa.me/917731965666?text=I%20want%20Bulk%20Order"
+       class="btn btn-success w-100 fw-bold rounded-pill py-2 mt-4">
+      <i class="bi bi-cart-plus"></i> Request Bulk Pricing
+    </a>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="container py-5">
+  <h2 class="fw-bold mb-4 text-center">Contact Us</h2>
+
+  <div class="contact-card p-4 text-center">
+
+    <div class="contact-badge mb-3">
+      <i class="bi bi-person-lines-fill me-2"></i> Reach Us Easily
+    </div>
+
+    <div class="contact-info">
+      <span><strong>Address:</strong> Rayudu Farms, Village Rd, Sample Town</span>
+      <span><strong>Working Hours:</strong> 6 AM – 10 PM</span>
+      <span><strong>Email:</strong> support@rayudufarms.com</span>
+    </div>
+
+    <div class="d-flex gap-2 justify-content-center mt-4">
+      <a href="https://wa.me/917731965666?text=Hello%2C%20I%20have%20a%20query"
+         class="btn btn-success w-auto fw-bold rounded-pill py-2 px-4">
+        <i class="bi bi-whatsapp"></i> WhatsApp
+      </a>
+
+      <a href="tel:+917731965666"
+         class="btn btn-dark w-auto fw-bold rounded-pill py-2 px-4">
+        <i class="bi bi-telephone-fill"></i> Call
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  © <span id="year"></span> Rayudu Farms • Fresh Junnu & Milk
+</footer>
+
+<script>
+  document.getElementById("year").innerText = new Date().getFullYear();
+</script>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
