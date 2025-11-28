@@ -58,31 +58,54 @@
       box-shadow:0 4px 15px rgba(0,0,0,0.15);
     }
 
-    /* ORDER NOW BUTTON */
     .order-btn {
       background: var(--accent);
       color: #fff !important;
       padding: 10px 18px;
       border-radius: 30px;
       font-weight: 600;
-      border: none;
-      display: inline-block;
       transition:0.3s ease;
       white-space: nowrap;
     }
 
     .order-btn:hover{
       background:#0a8b5c;
-      color:#fff !important;
     }
 
-    .hero-img{
-      max-width:450px;
-      width:100%;
-      border-radius:24px;
-      box-shadow:0 12px 35px rgba(0,0,0,0.18);
+    /* FULL WIDTH HERO */
+    .hero-full {
+      width: 100%;
+      position: relative;
+      margin-top: 20px;
     }
 
+    .hero-full-img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;              /* Fills nicely */
+      object-position: center;
+      border-radius: 0;               /* full width */
+      box-shadow: 0 12px 35px rgba(0,0,0,0.18);
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      text-align: center;
+      text-shadow: 0 4px 15px rgba(0,0,0,0.75);
+      padding: 10px 20px;
+      border-radius: 10px;
+    }
+
+    .hero-overlay h1 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+
+    /* CARDS */
     .soft-card,.product-card,.contact-card{
       background:var(--card-bg);
       backdrop-filter:blur(var(--blur));
@@ -92,20 +115,9 @@
       transition:0.3s ease;
     }
 
-    .product-card:hover,.soft-card:hover,.contact-card:hover{
+    .soft-card:hover,.product-card:hover,.contact-card:hover{
       transform:translateY(-5px);
       box-shadow:0 14px 40px rgba(0,0,0,0.15);
-    }
-
-    .contact-badge{
-      background:linear-gradient(135deg,#0da36c,#59e7ab);
-      display:inline-flex;
-      align-items:center;
-      font-weight:700;
-      padding:8px 16px;
-      border-radius:50px;
-      color:#fff;
-      font-size:0.95rem;
     }
 
     footer{
@@ -117,7 +129,6 @@
       text-align:center;
     }
 
-    /* CONTACT INFO STYLING */
     .contact-info {
       display: flex;
       flex-direction: column;
@@ -127,27 +138,16 @@
       border-radius: 12px;
       border-left: 5px solid var(--accent);
       box-shadow: 0 4px 15px rgba(0,0,0,0.06);
-      font-size: 1rem;
-      color: var(--dark);
       max-width: 400px;
       margin: 0 auto 20px auto;
     }
 
-    .contact-info span {
-      display: block;
-      font-weight: 600;
-    }
-
-    .contact-info span strong {
-      color: var(--accent);
-    }
-
-    /* MOBILE MENU FIX */
     @media (max-width: 768px) {
-      .navbar-collapse {
-        background: #ffffffee;
-        padding: 15px;
-        border-radius: 12px;
+      .hero-full-img {
+        height: 300px;
+      }
+      .hero-overlay h1 {
+        font-size: 2rem;
       }
     }
   </style>
@@ -169,28 +169,25 @@
 
     <div class="collapse navbar-collapse justify-content-end" id="mainMenu">
       <div class="d-flex flex-column flex-md-row gap-3 align-items-md-center fw-semibold">
-
         <a href="#products" class="text-dark text-decoration-none">Products</a>
         <a href="#showcase" class="text-dark text-decoration-none">Showcase</a>
         <a href="#pricing" class="text-dark text-decoration-none">Pricing</a>
         <a href="#contact" class="text-dark text-decoration-none">Contact</a>
-
-        <a href="https://wa.me/917731965666?text=I%20want%20to%20Order%20Now"
-           class="order-btn text-decoration-none text-white">
-           Order Now
-        </a>
-
+        <a href="https://wa.me/917731965666?text=I%20want%20to%20Order%20Now" class="order-btn">Order Now</a>
       </div>
     </div>
 
   </div>
 </nav>
 
-<!-- HERO -->
-<section class="text-center py-5">
-  <img src="https://images.hindustantimes.com/telugu/img/2025/04/02/1600x900/junnu_1743555607184_1743555627491.jpg" class="hero-img">
-  <h1 class="fw-bold mt-4">Pure Junnu & Fresh Milk</h1>
-  <p class="text-muted fs-5">Village-sourced, traditionally prepared, delivered fresh daily.</p>
+<!-- FULL WIDTH HERO -->
+<section class="hero-full">
+  <img src="https://images.hindustantimes.com/telugu/img/2025/04/02/1600x900/junnu_1743555607184_1743555627491.jpg" class="hero-full-img">
+
+  <div class="hero-overlay">
+    <h1>Pure Junnu & Fresh Milk</h1>
+    <p class="fs-5">Village-sourced, traditionally prepared, delivered fresh daily.</p>
+  </div>
 </section>
 
 <!-- SHOWCASE -->
@@ -238,19 +235,17 @@
         <h5 class="fw-bold">Junnu</h5>
         <p class="text-muted small">Traditional preserved Junnu powder.</p>
         <h4 class="text-success">₹400/kg</h4>
-        <a href="https://wa.me/917731965666?text=I%20want%20to%20book%20Junnu%20Powder"
-           class="btn btn-success w-100 mt-3 rounded-pill">Book on WhatsApp</a>
+        <a href="https://wa.me/917731965666?text=I%20want%20to%20book%20Junnu%20Powder" class="btn btn-success w-100 mt-3 rounded-pill">Book on WhatsApp</a>
       </div>
     </div>
 
     <div class="col-md-4">
       <div class="product-card p-3 h-100">
         <img src="https://ucarecdn.com/b3026e62-e102-4de4-9367-c3355d063d7d/-/format/auto/-/preview/3000x3000/-/quality/lighter/IMG_20201117_132103.jpg" class="rounded mb-3 w-100" height="170" style="object-fit:cover;">
-        <h5 class="fw-bold">Junnu mixed milk (jaggery, sugar, elachi, and pepper mixed) </h5>
+        <h5 class="fw-bold">Junnu mixed milk (jaggery, sugar, elachi, and pepper mixed)</h5>
         <p class="text-muted small">Balanced flavour, smooth & lightly mixed.</p>
         <h4 class="text-success">₹400/ltr</h4>
-        <a href="https://wa.me/917731965666?text=I%20want%20to%20book%20Mixed%20Junnu%20Milk"
-           class="btn btn-success w-100 mt-3 rounded-pill">Book on WhatsApp</a>
+        <a href="https://wa.me/917731965666?text=I%20want%20to%20book%20Mixed%20Junnu%20Milk" class="btn btn-success w-100 mt-3 rounded-pill">Book on WhatsApp</a>
       </div>
     </div>
 
@@ -260,8 +255,7 @@
         <h5 class="fw-bold">Junnu Milk</h5>
         <p class="text-muted small">Rich, creamy & full natural flavour.</p>
         <h4 class="text-success">₹500/ltr</h4>
-        <a href="https://wa.me/917731965666?text=I%20want%20to%20book%20Junnu%20Milk"
-           class="btn btn-success w-100 mt-3 rounded-pill">Book on WhatsApp</a>
+        <a href="https://wa.me/917731965666?text=I%20want%20to%20book%20Junnu%20Milk" class="btn btn-success w-100 mt-3 rounded-pill">Book on WhatsApp</a>
       </div>
     </div>
 
@@ -312,10 +306,6 @@
 
   <div class="contact-card p-4 text-center">
 
-    <div class="contact-badge mb-3">
-      <i class="bi bi-person-lines-fill me-2"></i> Reach Us Easily
-    </div>
-
     <div class="contact-info">
       <span><strong>Address:</strong> Rayudu Farms, Village Rd, Sample Town</span>
       <span><strong>Working Hours:</strong> 6 AM – 10 PM</span>
@@ -323,13 +313,11 @@
     </div>
 
     <div class="d-flex gap-2 justify-content-center mt-4">
-      <a href="https://wa.me/917731965666?text=Hello%2C%20I%20have%20a%20query"
-         class="btn btn-success w-auto fw-bold rounded-pill py-2 px-4">
+      <a href="https://wa.me/917731965666?text=Hello%2C%20I%20have%20a%20query" class="btn btn-success w-auto fw-bold rounded-pill py-2 px-4">
         <i class="bi bi-whatsapp"></i> WhatsApp
       </a>
 
-      <a href="tel:+917731965666"
-         class="btn btn-dark w-auto fw-bold rounded-pill py-2 px-4">
+      <a href="tel:+917731965666" class="btn btn-dark w-auto fw-bold rounded-pill py-2 px-4">
         <i class="bi bi-telephone-fill"></i> Call
       </a>
     </div>
@@ -351,4 +339,3 @@
 
 </body>
 </html>
-
