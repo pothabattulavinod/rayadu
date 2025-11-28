@@ -72,7 +72,7 @@
       background:#0a8b5c;
     }
 
-    /* FULL WIDTH HERO */
+    /* HERO FULL WIDTH */
     .hero-full {
       width: 100%;
       position: relative;
@@ -82,27 +82,38 @@
     .hero-full-img {
       width: 100%;
       height: 420px;
-      object-fit: cover;              /* Fills nicely */
+      object-fit: cover;
       object-position: center;
-      border-radius: 0;               /* full width */
+      border-radius: 0;
       box-shadow: 0 12px 35px rgba(0,0,0,0.18);
     }
 
     .hero-overlay {
       position: absolute;
-      top: 50%;
+      bottom: 25px;
       left: 50%;
-      transform: translate(-50%, -50%);
+      transform: translateX(-50%);
+      width: 90%;
       color: #fff;
       text-align: center;
-      text-shadow: 0 4px 15px rgba(0,0,0,0.75);
-      padding: 10px 20px;
-      border-radius: 10px;
+      text-shadow: 0 4px 15px rgba(0,0,0,0.8);
     }
 
     .hero-overlay h1 {
-      font-size: 3rem;
+      font-size: 2.2rem;
       font-weight: 700;
+    }
+
+    @media (max-width: 768px) {
+      .hero-full-img {
+        height: 260px;
+      }
+      .hero-overlay h1 {
+        font-size: 1.6rem;
+      }
+      .hero-overlay p {
+        font-size: 0.9rem;
+      }
     }
 
     /* CARDS */
@@ -141,15 +152,6 @@
       max-width: 400px;
       margin: 0 auto 20px auto;
     }
-
-    @media (max-width: 768px) {
-      .hero-full-img {
-        height: 300px;
-      }
-      .hero-overlay h1 {
-        font-size: 2rem;
-      }
-    }
   </style>
 </head>
 
@@ -158,7 +160,6 @@
 <!-- NAVIGATION -->
 <nav class="navbar navbar-expand-md">
   <div class="container">
-
     <a class="d-flex align-items-center text-decoration-none text-dark fw-bold fs-4" href="#">
       <div class="logo">RF</div> Rayudu Farms
     </a>
@@ -180,13 +181,12 @@
   </div>
 </nav>
 
-<!-- FULL WIDTH HERO -->
+<!-- HERO -->
 <section class="hero-full">
   <img src="https://images.hindustantimes.com/telugu/img/2025/04/02/1600x900/junnu_1743555607184_1743555627491.jpg" class="hero-full-img">
-
   <div class="hero-overlay">
     <h1>Pure Junnu & Fresh Milk</h1>
-    <p class="fs-5">Village-sourced, traditionally prepared, delivered fresh daily.</p>
+    <p>Village-sourced, traditionally prepared, delivered fresh daily.</p>
   </div>
 </section>
 
@@ -195,7 +195,6 @@
   <h2 class="fw-bold text-center mb-4">Why Our Milk is Special</h2>
 
   <div class="row g-4">
-
     <div class="col-md-4">
       <div class="soft-card p-4 text-center h-100">
         <i class="bi bi-droplet-half display-5 text-success"></i>
@@ -219,7 +218,6 @@
         <p class="text-muted">Traditional colostrum-based Junnu prepared fresh.</p>
       </div>
     </div>
-
   </div>
 </section>
 
@@ -229,33 +227,42 @@
 
   <div class="row g-4">
 
-    <div class="col-md-4">
+    <div class="col-md-3">
       <div class="product-card p-3 h-100">
         <img src="https://images.hindustantimes.com/telugu/img/2025/04/02/1600x900/junnu_1743555607184_1743555627491.jpg" class="rounded mb-3 w-100" height="170" style="object-fit:cover;">
-        <h5 class="fw-bold">Junnu</h5>
+        <h5 class="fw-bold">Junnu </h5>
         <p class="text-muted small">Traditional preserved Junnu powder.</p>
         <h4 class="text-success">₹400/kg</h4>
         <a href="https://wa.me/917731965666?text=I%20want%20to%20book%20Junnu%20Powder" class="btn btn-success w-100 mt-3 rounded-pill">Book on WhatsApp</a>
       </div>
     </div>
 
-    <div class="col-md-4">
+    <div class="col-md-3">
       <div class="product-card p-3 h-100">
         <img src="https://ucarecdn.com/b3026e62-e102-4de4-9367-c3355d063d7d/-/format/auto/-/preview/3000x3000/-/quality/lighter/IMG_20201117_132103.jpg" class="rounded mb-3 w-100" height="170" style="object-fit:cover;">
-        <h5 class="fw-bold">Junnu mixed milk (jaggery, sugar, elachi, and pepper mixed)</h5>
-        <p class="text-muted small">Balanced flavour, smooth & lightly mixed.</p>
+        <h5 class="fw-bold">Mixed Junnu Milk</h5>
+        <p class="text-muted small">Jaggery, sugar, elachi & pepper mixed.</p>
         <h4 class="text-success">₹400/ltr</h4>
         <a href="https://wa.me/917731965666?text=I%20want%20to%20book%20Mixed%20Junnu%20Milk" class="btn btn-success w-100 mt-3 rounded-pill">Book on WhatsApp</a>
       </div>
     </div>
 
-    <div class="col-md-4">
+    <div class="col-md-3">
       <div class="product-card p-3 h-100">
         <img src="https://www.yummytummyaarthi.com/wp-content/uploads/2018/06/IMG_6261.jpg" class="rounded mb-3 w-100" height="170" style="object-fit:cover;">
         <h5 class="fw-bold">Junnu Milk</h5>
         <p class="text-muted small">Rich, creamy & full natural flavour.</p>
         <h4 class="text-success">₹500/ltr</h4>
         <a href="https://wa.me/917731965666?text=I%20want%20to%20book%20Junnu%20Milk" class="btn btn-success w-100 mt-3 rounded-pill">Book on WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="product-card p-3 h-100 text-center">
+        <img src="https://keralaayurveda.com/cdn/shop/articles/unnamed_bf4e5c33-7e11-42d7-86d8-d5f88a4913c9.jpg" class="rounded mb-3 w-100" height="170" style="object-fit:cover;">
+        <h5 class="fw-bold">Pure Ghee</h5>
+        <p class="text-muted small">Made from premium village butter.</p>
+        <h4 class="text-danger fw-bold">Coming Soon</h4>
       </div>
     </div>
 
@@ -281,13 +288,11 @@
     <p>Bulk discounts start from <strong>50+ litres/kg</strong>.</p>
 
     <div class="d-flex gap-2 mt-3 justify-content-center">
-      <a href="https://wa.me/917731965666?text=Hello%2C%20I%20want%20Bulk%20Order"
-         class="btn btn-success w-auto fw-bold rounded-pill py-2 px-4">
+      <a href="https://wa.me/917731965666?text=Hello%2C%20I%20want%20Bulk%20Order" class="btn btn-success w-auto fw-bold rounded-pill py-2 px-4">
         <i class="bi bi-whatsapp"></i> WhatsApp
       </a>
 
-      <a href="tel:+917731965666"
-         class="btn btn-dark w-auto fw-bold rounded-pill py-2 px-4">
+      <a href="tel:+917731965666" class="btn btn-dark w-auto fw-bold rounded-pill py-2 px-4">
         <i class="bi bi-telephone-fill"></i> Call
       </a>
     </div>
@@ -302,23 +307,22 @@
 
 <!-- CONTACT -->
 <section id="contact" class="container py-5">
-  <h2 class="fw-bold mb-4 text-center">Contact Us</h2>
+  <h2 class="fw-bold text-center mb-4">Contact Us</h2>
 
-  <div class="contact-card p-4 text-center">
+  <div class="contact-card p-4 mx-auto" style="max-width: 650px;">
 
-    <div class="contact-info">
-      <span><strong>Address:</strong> Rayudu Farms, Village Rd, Sample Town</span>
-      <span><strong>Working Hours:</strong> 6 AM – 10 PM</span>
-      <span><strong>Email:</strong> support@rayudufarms.com</span>
-    </div>
+   
+    
 
-    <div class="d-flex gap-2 justify-content-center mt-4">
-      <a href="https://wa.me/917731965666?text=Hello%2C%20I%20have%20a%20query" class="btn btn-success w-auto fw-bold rounded-pill py-2 px-4">
-        <i class="bi bi-whatsapp"></i> WhatsApp
+    <div class="d-flex gap-3 flex-column flex-md-row justify-content-center">
+      <a href="https://wa.me/917731965666?text=Hello%20Rayudu%20Farms%20👋"
+         class="btn btn-success px-4 py-2 rounded-pill w-100">
+         <i class="bi bi-whatsapp"></i> WhatsApp
       </a>
 
-      <a href="tel:+917731965666" class="btn btn-dark w-auto fw-bold rounded-pill py-2 px-4">
-        <i class="bi bi-telephone-fill"></i> Call
+      <a href="tel:+917731965666"
+         class="btn btn-dark px-4 py-2 rounded-pill w-100">
+         <i class="bi bi-telephone-fill"></i> Call Us
       </a>
     </div>
 
